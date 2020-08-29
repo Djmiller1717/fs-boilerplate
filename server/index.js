@@ -12,7 +12,6 @@ app.use(morgan('dev'))
 app.use(expres.json())
 //use express.static() MAKE SURE THE PATH TO YOUR PUBLIC FOLDER IS RIGHT!
 app.use('/public', express.static(path.join(__dirname, 'public')))
-//still need to install path (not sure if dev dependency or not - also unsure of path)
 //app.use('/public', express.static(path.join(__dirname, 'server/public')))
 
 //require in your routes and use them on your api path
@@ -22,5 +21,14 @@ app.use('/public', express.static(path.join(__dirname, 'public')))
 //500 handler
 
 //set PORT
+const PORT = 3000
 
 //listen
+const init = async function(){
+    //await syncAndSeed()
+    app.listen(PORT, function(){
+        console.log(`Server is listening o port ${PORT}`)
+    })
+}
+
+init()
