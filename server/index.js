@@ -31,5 +31,12 @@ const init = async function(){
         console.log(`Server is listening on port ${PORT}`)
     })
 }
+// For Deployment
+// const init = async function(){
+//     await syncAndSeed()
+//     app.listen(process.env.PORT || PORT, function(){
+//         console.log(`Server is listening on port ${PORT}`)
+//     })
+// }
 
 init()
